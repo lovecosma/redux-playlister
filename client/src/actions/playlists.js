@@ -3,7 +3,6 @@ export const fetchPlaylists = (dispatch) => {
     fetch("/api/playlists")
     .then(resp => resp.json())
     .then(playlistsData => {
-        debugger
         dispatch({type: "ADDING_PLAYLISTS", playlists: [...playlistsData]})
     })
 }
